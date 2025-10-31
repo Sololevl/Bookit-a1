@@ -11,7 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "types": ["node"],               // ✅ Fix `process` & `console`
+   "typeRoots": ["./node_modules/@types"],
     "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*"],
