@@ -6,13 +6,13 @@ import { createTables } from './config/migrate';
 
 dotenv.config();
 
-createTables()
-  .then(() => {
-    console.log('✅ Migration completed');
-  })
-  .catch((error) => {
-    console.error('❌ Migration failed:', error);
-  });
+// createTables()
+//   .then(() => {
+//     console.log('✅ Migration completed');
+//   })
+//   .catch((error) => {
+//     console.error('❌ Migration failed:', error);
+//   });
 
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
