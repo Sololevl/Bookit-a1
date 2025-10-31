@@ -2,8 +2,19 @@ import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import routes from './routes';
+import { createTables } from './config/migrate';
 
 dotenv.config();
+
+createTables()
+  .then(() => {
+    console.log('✅ Migration completed');
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error('❌ Migration failed:', error);
+    process.exit(1);
+  });
 
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
