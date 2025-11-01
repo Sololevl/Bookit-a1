@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Experience, BookingRequest } from '../types';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://bookit-a1.onrender.com/api',
   headers: { "Content-Type": "application/json" },
 });
 
